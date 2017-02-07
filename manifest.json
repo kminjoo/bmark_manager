@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "bmark",
+	"version": "1.0",
+	"description": "A bookmark manager.",
+	// "icons": {},
+	"browser_action": {
+		"default_title": "manager",
+		"default_popup": "manager.html"
+	},
+	"content_scripts": [{
+	    "js": [
+	        "/bootstrap/js/bootstrap.min.js"
+	    ],
+	    "matches": ["*://*/*"]
+	}],
+	"permissions": ["bookmarks", "http://www.google.com/"],
+	"content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
